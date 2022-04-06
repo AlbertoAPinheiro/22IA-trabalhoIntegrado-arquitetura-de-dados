@@ -1,0 +1,60 @@
+CREATE TABLE dados_bancarios(
+        id_conta CHAR(10) NOT NULL,
+        agencia INT(7) NOT NULL,
+        saldo FLOAT, 
+        PRIMARY KEY (id_conta)
+);
+
+CREATE TABLE depositos(
+        identificacao_deposito VARCHAR NOT NULL, 
+        id_conta CHAR(10) NOT NULL, 
+        valor_solicitado FLOAT. 
+        valor_conferido FLOAT, 
+        data_deposito DATE, 
+        data_faturamento DATE,
+        PRIMARY KEY(identificacao_deposito)
+);
+
+CREATE TABLE dados_bancarios(
+        id_conta CHAR(10) NOT NULL,
+        primeiro_nome VARCHAR,
+        sobrenome VARCHAR,
+        data_nascimento DATE,
+        logradouro VARCHAR,
+        numero INT,
+        complemento VARCHAR,
+        bairro VARCHAR,
+        cidade VARCHAR,
+        UF CHAR(2),
+        cep INT,
+        cpf_raiz INT,
+        cpf_verificacao INT,
+        rg INT,
+        telefone_ddd INT(2),
+        telefone_numero INT,
+        celular_ddd INT(2),
+        celular_numero INT,
+        email VARCHAR, 
+        PRIMARY KEY(id_conta)
+);
+
+CREATE TABLE aquisicao_produtos_credito(
+        id_contratacao VARCHAR NOT NULL, 
+        id_conta CHAR(10),
+        produto_contratado VARCHAR,
+        data_contatacao DATE,
+        tipo_produto VARCHAR,
+        valor_produto FLOAT NOT NULL,
+        PRIMARY KEY (id_contratacao)
+);
+
+CREATE TABLE transferencia(
+        id_transferencia VARCHAR NOT NULL,
+        id_conta_saida CHAR(10),
+        id_conta_entrada CHAR(10),
+        modal_transferencia VARCHAR,
+        data_transferencia DATE, 
+        data_compensacao DATE,
+        valor FLOAT NOT NULL,
+        PRIMARY KEY(id_transferencia        )
+);
