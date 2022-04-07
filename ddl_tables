@@ -56,5 +56,5 @@ CREATE TABLE transferencia(
         data_transferencia DATE, 
         data_compensacao DATE,
         valor FLOAT NOT NULL,
-        PRIMARY KEY(id_transferencia        )
+        PRIMARY KEY(id_transferencia)
 );
